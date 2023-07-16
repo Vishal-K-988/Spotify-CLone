@@ -1,5 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+/* Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
-nav {
-    font-family: 'Nunito Sans', sans-serif;
+/* our root variable which we will be our theme ! 
+ease t0 access  */
+/* easily accessible throughout the project just using : 
+var(--grey) 😤 */
+
+:root{
+    --black: #000;
+    --grey: #121212;
+    --light-grey: #232323;
+    --white:  #fff;
 }
+
+body,html{
+    height: 100%;
+    margin:0rem;
+    /* hidden so that humari website puri scroll na ho  */
+    overflow: hidden; 
+    /* commonly used */
+    display: flex;
+    flex-direction: column;
+    /* nunito font jo humne download kiya nahi toh `sans-serif ` used hooga !  */
+    font-family: "Nunito", "sans-serif";
+    /* Whole page ka bg color ==  black  */
+    background-color: var(--black);
+    /* font color == white  */
+    color: var(--white);
+}
+
+
+/* anchor tags to make white and no text- decoration 
+What is text-decoration: https://www.w3schools.com/cssref/pr_text_text-decoration.php
+*/
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background-color: var(--black);
+    padding: 0.5rem;
+    margin-left: 0%;
+    margin-right: 0%;
+  
+}
+
+
+.Sidebar{
+    background-color: var(--black);
+    /* Don't know about this - flex: 0.25; */
+    flex: 0.25;
+    flex-direction: row;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.main-content{
+    background-color: var(--grey);
+    flex:0.8;
+    overflow-y: auto;
+    padding-right: 0%;
+    border-radius: 0.5rem;
+
+}
+/* 1rem = 16px
+relatve pm */
+
+.player{
+    position: fixed;
+    bottom: 0;
+    border-radius: 0.5rem;
+    height: 80px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+
+.top-icons{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    /* gap between home icon and search icon -- vertically  */
+    gap: 1px;
+    padding: 1rem 1.5 rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.link-flex{
+    display: flex;
+    justify-content:flex-start;
+    gap: 0.5rem;
+    align-items: center;
+    opacity: 0.7;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* when cursors hovers */
+.link-flex:hover{
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+/* image styling */
+.link-flex img{
+    height: 1.2rem;
+    width: 1.2rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* paragrah styling */
+.link-flex p{
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.library{
+    background-color: var(--grey);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    overflow-y: auto !important;
+    flex: 3;
+    /* need to adjust height according to our display 
+    need to check at which value whole content is visible  */
+    /* issue is that : player div ke piche , library div chupa hua h !  */
+    height:73vh;
+}
+
+.flex-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.flex-top img{
+    height: 1rem;
+    width: 1rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.flex-top p{
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.flex-top p:hover{
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.flex-top img:hover{
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.chip{
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--light-grey);
+    border-radius: 5rem;
+    width: fit-content;
+    font-weight: normal;
+    color: var(--white);
+}
+
+
+
+
+
+
+/* 
+#myProgressBar{
+    width: 60%; 
+
+    cursor: pointer;
+} */
